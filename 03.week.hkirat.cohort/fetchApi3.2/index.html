@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style src="styles.css"></style>
+</head>
+<body>
+    <script>
+        function getAnimalData(){
+            alert('kya biduu janwar hai kya ');
+            const response = fetch('https://fakerapi.it/api/v1/persons') // async function so wait for the result
+            .then((response)=>{
+                response.json()
+                .then((finalData)=>{ // json() too a async function so wait for result 
+                    console.log(finalData);
+                })
+            })
+        }
+    </script>
+    <h1>Hi There how are you doing</h1>
+    <button onclick="getAnimalData()">GET ANIMAL DATA</button>
+
+</body>
+</html>
